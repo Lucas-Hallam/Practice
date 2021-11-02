@@ -36,7 +36,7 @@ class Balloon {
     }
   }
   boolean inBalloon(float x, float y) {
-    if (((int)(x)-myX)*((int)(x)-myX)+((int)(y)-myY)*((int)(y)-myY) < mySize*mySize) {
+    if ((x-myX)*(x-myX)+(y-myY)*(y-myY) < (double) (mySize*mySize)/4) {
       return true;
     } else {
       return false;
